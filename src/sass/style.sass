@@ -13,10 +13,23 @@ button
     &:active
         background-color: orange
         
-
 .circle
     width: 50px
     height: 50px
     background-color: green
     border-radius: 100%
     margin-top: 10px
+    transition: 0.5s all
+    &:nth-child(2n)
+        background-color: red
+    &::before
+        content: ''
+        display: block
+        height: 5px
+        background-color: #000
+        transition: 0.5s all
+        width: 0%
+    &:hover
+        &::before
+           width: 100%
+        
